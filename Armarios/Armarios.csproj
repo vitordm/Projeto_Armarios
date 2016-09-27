@@ -1,0 +1,376 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A0570627-58D8-4A51-9A5B-099ECFE39894}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Armarios</RootNamespace>
+    <AssemblyName>Armarios</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <TargetCulture>pt-BR</TargetCulture>
+    <ProductName>Armários</ProductName>
+    <PublisherName>Vítor Gaudêncio Isse de Oliveira</PublisherName>
+    <ApplicationRevision>3</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icone.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>BA37F5FDF40D27D076E17C744EB8F7AB5723D1FB</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Armarios_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ComboBoxItem.cs" />
+    <Compile Include="ComoFazer.cs" />
+    <Compile Include="Conexao.cs" />
+    <Compile Include="DeleteFromGrid.cs" />
+    <Compile Include="Edicoes.cs" />
+    <Compile Include="formCadastrarVinculo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formCadastrarVinculo.Designer.cs">
+      <DependentUpon>formCadastrarVinculo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formCadastroArmario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formCadastroArmario.Designer.cs">
+      <DependentUpon>formCadastroArmario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formCadastroLocais.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formCadastroLocais.Designer.cs">
+      <DependentUpon>formCadastroLocais.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formCadastroPessoa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formCadastroPessoa.Designer.cs">
+      <DependentUpon>formCadastroPessoa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formCadastroTipos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formCadastroTipos.Designer.cs">
+      <DependentUpon>formCadastroTipos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormConfig.Designer.cs">
+      <DependentUpon>FormConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formDesvincular.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formDesvincular.Designer.cs">
+      <DependentUpon>formDesvincular.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLista.Designer.cs">
+      <DependentUpon>FormLista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPrincipal.Designer.cs">
+      <DependentUpon>FormPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formCadastroUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formCadastroUsuarios.Designer.cs">
+      <DependentUpon>formCadastroUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formRelArmarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formRelArmarios.Designer.cs">
+      <DependentUpon>formRelArmarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formSelecionaRelatorioEmprestimo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formSelecionaRelatorioEmprestimo.Designer.cs">
+      <DependentUpon>formSelecionaRelatorioEmprestimo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCadastroSituacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCadastroSituacao.Designer.cs">
+      <DependentUpon>frmCadastroSituacao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Information.cs" />
+    <Compile Include="Md5.cs" />
+    <Compile Include="NewUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewUser.Designer.cs">
+      <DependentUpon>NewUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rel.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RelArmarios.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RelArmarios.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RelEmprestimos.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RelEmprestimos.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SaveXML.cs" />
+    <Compile Include="ShowRelatorio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowRelatorio.Designer.cs">
+      <DependentUpon>ShowRelatorio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sobre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sobre.Designer.cs">
+      <DependentUpon>Sobre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utilitarios.cs" />
+    <EmbeddedResource Include="formCadastrarVinculo.resx">
+      <DependentUpon>formCadastrarVinculo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formCadastroArmario.resx">
+      <DependentUpon>formCadastroArmario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formCadastroLocais.resx">
+      <DependentUpon>formCadastroLocais.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formCadastroPessoa.resx">
+      <DependentUpon>formCadastroPessoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formCadastroTipos.resx">
+      <DependentUpon>formCadastroTipos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormConfig.resx">
+      <DependentUpon>FormConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formDesvincular.resx">
+      <DependentUpon>formDesvincular.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLista.resx">
+      <DependentUpon>FormLista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPrincipal.resx">
+      <DependentUpon>FormPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formCadastroUsuarios.resx">
+      <DependentUpon>formCadastroUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formRelArmarios.resx">
+      <DependentUpon>formRelArmarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formSelecionaRelatorioEmprestimo.resx">
+      <DependentUpon>formSelecionaRelatorioEmprestimo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCadastroSituacao.resx">
+      <DependentUpon>frmCadastroSituacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewUser.resx">
+      <DependentUpon>NewUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Rel.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rel.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RelArmarios.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RelArmarios.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RelEmprestimos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RelEmprestimos.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowRelatorio.resx">
+      <DependentUpon>ShowRelatorio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sobre.resx">
+      <DependentUpon>Sobre.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Armarios_TemporaryKey.pfx" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\ms access2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\tela_login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icone.ico" />
+    <None Include="images\Lock_32.png" />
+    <None Include="images\developer.jpg" />
+    <None Include="images\1381508655_stock_lock-open_.png" />
+    <Content Include="xmlEmprestimo.xml" />
+    <None Include="images\1379666600_cross.png" />
+    <None Include="images\Save.png" />
+    <None Include="images\1379632304_file-manager.png" />
+    <None Include="images\1379624549_contact-new.png" />
+    <None Include="images\find.png" />
+    <None Include="images\contact-new-48.png" />
+    <None Include="images\search.png" />
+    <None Include="images\application_form_edit.png" />
+    <None Include="images\eye.png" />
+    <None Include="images\delete.png" />
+    <None Include="images\refresh.png" />
+    <None Include="images\Lock.png" />
+    <None Include="images\people.png" />
+    <None Include="images\maps.png" />
+    <None Include="images\File_HTML.png" />
+    <None Include="images\File_XLS_Excel.png" />
+    <None Include="images\newWindow34x34.png" />
+    <None Include="images\CabinetSmall.png" />
+    <None Include="images\access.png" />
+    <None Include="images\ms access1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="SAP.CrystalReports14.NET.2.0">
+      <Visible>False</Visible>
+      <ProductName>SAP Crystal Reports Runtime Engine for .NET Framework</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
